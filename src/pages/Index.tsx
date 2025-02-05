@@ -1,4 +1,4 @@
-import { FileText, Send } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,42 +38,61 @@ const Index = () => {
   ];
 
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+    <div className="snap-x-mandatory h-screen flex overflow-x-scroll">
       <Navbar />
       
       {/* Home Section */}
-      <section id="home" className="section-slide pt-16 flex items-center justify-center">
+      <section id="home" className="section-slide flex flex-col items-center justify-center relative">
         <div className="text-center animate-fadeIn">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
             Software Developer
           </h1>
           <p className="text-lg text-muted-foreground">
             Building beautiful and functional web experiences
           </p>
         </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="section-slide flex items-center">
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8">About Me</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <Button asChild>
+        <div className="absolute bottom-12 flex flex-col items-center gap-8">
+          <Button asChild variant="outline" size="lg">
             <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
               Download CV
             </a>
           </Button>
+          <div className="flex gap-6">
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="mailto:your.email@example.com">
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="section-slide flex items-center">
+        <div className="container max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 font-playfair">About Me</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
       </section>
 
       {/* Portfolio Section */}
       <section id="portfolio" className="section-slide flex items-center">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-8">Portfolio</h2>
+          <h2 className="text-3xl font-bold mb-8 font-playfair">Portfolio</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
@@ -85,7 +104,7 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="section-slide flex items-center">
         <div className="container max-w-xl">
-          <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+          <h2 className="text-3xl font-bold mb-8 font-playfair">Contact Me</h2>
           <form className="space-y-6">
             <Input placeholder="Your Name" />
             <Input type="email" placeholder="Your Email" />

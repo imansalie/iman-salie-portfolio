@@ -20,6 +20,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -62,9 +63,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        slideUp: {
-          "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(0)" },
+        slideLeft: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
         },
         fadeIn: {
           "0%": { opacity: "0" },
@@ -72,7 +73,7 @@ export default {
         },
       },
       animation: {
-        slideUp: "slideUp 0.5s ease-out",
+        slideLeft: "slideLeft 0.5s ease-out",
         fadeIn: "fadeIn 0.5s ease-out",
       },
     },
