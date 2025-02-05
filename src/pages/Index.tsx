@@ -1,12 +1,102 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { FileText, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Navbar } from "@/components/Navbar";
 
 const Index = () => {
+  const projects = [
+    {
+      title: "Project 1",
+      description: "Description for Project 1",
+      githubUrl: "#",
+      demoUrl: "#",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Project 2",
+      description: "Description for Project 2",
+      githubUrl: "#",
+      demoUrl: "#",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Project 3",
+      description: "Description for Project 3",
+      githubUrl: "#",
+      demoUrl: "#",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Project 4",
+      description: "Description for Project 4",
+      githubUrl: "#",
+      demoUrl: "#",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+      <Navbar />
+      
+      {/* Home Section */}
+      <section id="home" className="section-slide pt-16 flex items-center justify-center">
+        <div className="text-center animate-fadeIn">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Software Developer
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Building beautiful and functional web experiences
+          </p>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="section-slide flex items-center">
+        <div className="container max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8">About Me</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <Button asChild>
+            <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-4 w-4" />
+              Download CV
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="section-slide flex items-center">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-8">Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section-slide flex items-center">
+        <div className="container max-w-xl">
+          <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+          <form className="space-y-6">
+            <Input placeholder="Your Name" />
+            <Input type="email" placeholder="Your Email" />
+            <Textarea placeholder="Your Message" className="min-h-[150px]" />
+            <Button className="w-full">
+              <Send className="mr-2 h-4 w-4" />
+              Send Message
+            </Button>
+          </form>
+        </div>
+      </section>
     </div>
   );
 };
