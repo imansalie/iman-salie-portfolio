@@ -56,7 +56,7 @@ const Index = () => {
             Building beautiful and functional web experiences
           </p>
         </div>
-        <div className="fixed bottom-8 md:bottom-12 left-0 right-0 flex flex-col items-center gap-6 px-4">
+        <div className="absolute bottom-8 md:bottom-12 left-0 right-0 flex flex-col items-center gap-6 px-4">
           <Button asChild variant="outline" size="lg" className="w-full max-w-[200px]">
             <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
