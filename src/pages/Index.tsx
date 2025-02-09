@@ -88,7 +88,7 @@ const Index = () => {
         <div className="container max-w-4xl px-4 md:px-6 py-16 md:py-0">
           <h2 className="text-3xl font-bold mb-8 font-playfair">About Me</h2>
           <p className="text-lg text-muted-foreground mb-12">
-          Innovative full-stack developer constantly evolving and pushing boundaries. From crafting sleek front-end designs to optimizing scalable back-end systems, I’m passionate about creating impactful solutions. With a growing interest in AI and Spring Boot, I’m always learning, adapting, and ready to tackle the next big challenge.
+          Innovative full-stack developer constantly evolving and pushing boundaries. From crafting sleek front-end designs to optimizing scalable back-end systems, I’m passionate about creating impactful solutions. With a growing interest in AI/ML and Spring Boot, I’m always learning, adapting, and ready to tackle the next big challenge.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
