@@ -58,7 +58,7 @@ const Index = () => {
         </div>
         <div className="absolute bottom-8 md:bottom-12 left-0 right-0 flex flex-col items-center gap-6 px-4">
           <Button asChild variant="outline" size="lg" className="w-full max-w-[200px]">
-            <a href="https://drive.google.com/file/d/17JrBWs1UQoZLBN5eIZJL4odJ6OBmU8hD/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/112BJcED5A0nGgmtBxy0N2GKLWcNlAclJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
               Download CV
             </a>
