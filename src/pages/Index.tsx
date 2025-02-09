@@ -8,28 +8,28 @@ const Index = () => {
   const projects = [
     {
       title: "Smart-City-Dashboard",
-      description: "Integrates real-time traffic updates, weather forecasts, and local news for a specific city",
+      description: "A dynamic and interactive dashboard that integrates real-time traffic updates, weather forecasts, and local news for a specific city",
       githubUrl: "https://github.com/imansalie/Smart-City-Dashboard.git",
       demoUrl: "#",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "AI-Enhanced-Cybersecurity-Threat-Detector",
-      description: "Combining artificial intelligence and cybersecurity to proactively identify and mitigate potential threats",
+      description: "A cutting-edge solution combining artificial intelligence and cybersecurity to proactively identify and mitigate potential threats",
       githubUrl: "https://github.com/imansalie/AI-Enhanced-Cybersecurity-Threat-Detector.git",
       demoUrl: "#",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "Beauty-Trends-And-Social-Media-Sentiment-Analyzer",
-      description: "Analyze social media posts, product reviews, and beauty forums to identify sentiment and trends in the beauty industry",
+      description: "Analyze social media posts, product reviews, and beauty forums to identify sentiment and trends in the beauty industry, with a niche focus on K-beauty, seasonal trends, and eco-conscious beauty",
       githubUrl: "https://github.com/imansalie/Beauty-Trends-And-Social-Media-Sentiment-Analyzer.git",
       demoUrl: "#",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "AI-Powered-Chatbot-for-Customer-Support",
-      description: "AI-driven chatbot designed to provide tailored customer support and answer FAQs directly on a website.",
+      description: "AI-driven chatbot designed to provide tailored customer support and answer FAQs directly on a website",
       githubUrl: "https://github.com/imansalie/AI-Powered-Chatbot-for-Customer-Support.git",
       demoUrl: "#",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
@@ -109,7 +109,7 @@ const Index = () => {
       {/* Portfolio Section */}
       <section id="portfolio" className="section-slide flex items-center min-h-screen w-full">
         <div className="container px-4 md:px-6 py-16 md:py-0">
-          <h2 className="text-3xl font-bold mb-8 font-playfair">Portfolio</h2>
+          <h2 className="text-3xl font-bold mb-8 font-playfair">Iman Salie</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
