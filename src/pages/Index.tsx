@@ -50,7 +50,7 @@ const Index = () => {
       <section id="home" className="section-slide flex flex-col items-center justify-center min-h-screen relative w-full">
         <div className="text-center animate-fadeIn px-4 pt-16 md:pt-0">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
-            Software Developer|Software Engineer 
+            Software Developer | Software Engineer 
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
           Building seamless digital experiences through code, creativity, and clean engineering.
