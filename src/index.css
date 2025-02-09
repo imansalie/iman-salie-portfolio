@@ -80,10 +80,20 @@
 /* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   .section-slide {
-    @apply pt-20; /* Add padding top for mobile to account for fixed navbar */
+    @apply pt-24 min-h-screen; /* Increased padding top and ensure full height */
   }
   
   .container {
-    @apply px-4;
+    @apply px-4 py-8; /* Added vertical padding */
+  }
+
+  /* Improve grid layout on mobile */
+  #portfolio .grid {
+    @apply grid-cols-1 gap-8;
+  }
+
+  /* Ensure content is properly spaced */
+  .section-slide > div {
+    @apply h-full flex flex-col justify-center;
   }
 }
