@@ -1,7 +1,6 @@
+
 import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Navbar } from "@/components/Navbar";
 
@@ -37,6 +36,12 @@ const Index = () => {
     },
   ];
 
+  const skills = [
+    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS", "HTML5/CSS3"] },
+    { category: "Backend", items: ["Node.js", "Express", "PostgreSQL", "REST APIs"] },
+    { category: "Tools", items: ["Git", "VS Code", "Docker", "AWS"] },
+  ];
+
   return (
     <div className="snap-x-mandatory h-screen flex overflow-x-scroll">
       <Navbar />
@@ -47,7 +52,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
             Software Developer
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground mb-8">
             Building beautiful and functional web experiences
           </p>
         </div>
@@ -82,10 +87,23 @@ const Index = () => {
       <section id="about" className="section-slide flex items-center">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-bold mb-8 font-playfair">About Me</h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-12">
             [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {skills.map((skillGroup, index) => (
+              <div key={index} className="p-6 rounded-lg bg-secondary/50">
+                <h3 className="text-xl font-semibold mb-4 font-playfair">{skillGroup.category}</h3>
+                <ul className="space-y-2">
+                  {skillGroup.items.map((skill, skillIndex) => (
+                    <li key={skillIndex} className="text-muted-foreground">{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -98,22 +116,6 @@ const Index = () => {
               <ProjectCard key={index} {...project} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="section-slide flex items-center">
-        <div className="container max-w-xl">
-          <h2 className="text-3xl font-bold mb-8 font-playfair">Contact Me</h2>
-          <form className="space-y-6">
-            <Input placeholder="Your Name" />
-            <Input type="email" placeholder="Your Email" />
-            <Textarea placeholder="Your Message" className="min-h-[150px]" />
-            <Button className="w-full">
-              <Send className="mr-2 h-4 w-4" />
-              Send Message
-            </Button>
-          </form>
         </div>
       </section>
     </div>
