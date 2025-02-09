@@ -47,8 +47,8 @@ const Index = () => {
       <Navbar />
       
       {/* Home Section */}
-      <section id="home" className="section-slide flex flex-col items-center justify-center relative">
-        <div className="text-center animate-fadeIn px-4">
+      <section id="home" className="section-slide flex flex-col items-center justify-center min-h-screen relative w-full">
+        <div className="text-center animate-fadeIn px-4 pt-16 md:pt-0">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
             Software Developer
           </h1>
@@ -84,8 +84,8 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-slide flex items-center">
-        <div className="container max-w-4xl px-4 md:px-6">
+      <section id="about" className="section-slide flex items-center min-h-screen w-full">
+        <div className="container max-w-4xl px-4 md:px-6 py-16 md:py-0">
           <h2 className="text-3xl font-bold mb-8 font-playfair">About Me</h2>
           <p className="text-lg text-muted-foreground mb-12">
             [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -108,8 +108,8 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="section-slide flex items-center">
-        <div className="container px-4 md:px-6">
+      <section id="portfolio" className="section-slide flex items-center min-h-screen w-full">
+        <div className="container px-4 md:px-6 py-16 md:py-0">
           <h2 className="text-3xl font-bold mb-8 font-playfair">Portfolio</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
