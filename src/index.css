@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -80,11 +79,11 @@
 /* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   .section-slide {
-    @apply pt-24 min-h-screen; /* Increased padding top and ensure full height */
+    @apply pt-24 min-h-screen pb-32; /* Added bottom padding for fixed elements */
   }
   
   .container {
-    @apply px-4 py-8; /* Added vertical padding */
+    @apply px-4 py-8;
   }
 
   /* Improve grid layout on mobile */
@@ -95,5 +94,10 @@
   /* Ensure content is properly spaced */
   .section-slide > div {
     @apply h-full flex flex-col justify-center;
+  }
+
+  /* Adjust fixed bottom content on mobile */
+  #home .fixed {
+    @apply bottom-6 px-6;
   }
 }

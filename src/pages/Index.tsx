@@ -1,5 +1,5 @@
 
-import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Navbar } from "@/components/Navbar";
@@ -48,7 +48,7 @@ const Index = () => {
       
       {/* Home Section */}
       <section id="home" className="section-slide flex flex-col items-center justify-center relative">
-        <div className="text-center animate-fadeIn">
+        <div className="text-center animate-fadeIn px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
             Software Developer
           </h1>
@@ -56,14 +56,14 @@ const Index = () => {
             Building beautiful and functional web experiences
           </p>
         </div>
-        <div className="absolute bottom-12 flex flex-col items-center gap-8">
-          <Button asChild variant="outline" size="lg">
+        <div className="fixed bottom-8 md:bottom-12 left-0 right-0 flex flex-col items-center gap-6 px-4">
+          <Button asChild variant="outline" size="lg" className="w-full max-w-[200px]">
             <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
               Download CV
             </a>
           </Button>
-          <div className="flex gap-6">
+          <div className="flex gap-4">
             <Button variant="ghost" size="icon" asChild>
               <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
@@ -85,14 +85,14 @@ const Index = () => {
 
       {/* About Section */}
       <section id="about" className="section-slide flex items-center">
-        <div className="container max-w-4xl">
+        <div className="container max-w-4xl px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-8 font-playfair">About Me</h2>
           <p className="text-lg text-muted-foreground mb-12">
             [Your description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {skills.map((skillGroup, index) => (
               <div key={index} className="p-6 rounded-lg bg-secondary/50">
                 <h3 className="text-xl font-semibold mb-4 font-playfair">{skillGroup.category}</h3>
@@ -109,7 +109,7 @@ const Index = () => {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="section-slide flex items-center">
-        <div className="container">
+        <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-8 font-playfair">Portfolio</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
