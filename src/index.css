@@ -76,3 +76,14 @@
 .snap-x-mandatory {
   @apply snap-x snap-mandatory;
 }
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .section-slide {
+    @apply pt-20; /* Add padding top for mobile to account for fixed navbar */
+  }
+  
+  .container {
+    @apply px-4;
+  }
+}

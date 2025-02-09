@@ -1,3 +1,4 @@
+
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -25,7 +26,6 @@ export const Navbar = () => {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Portfolio", href: "#portfolio" },
-    { label: "Contact", href: "#contact" },
   ];
 
   return (
